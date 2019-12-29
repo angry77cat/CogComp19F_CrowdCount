@@ -1,6 +1,8 @@
 CSRNet-pytorch-master/
 ShanghaiTech_Crowd_Counting_Dataset/
 UCF-QNRF_ECCV18/
+quickstart.ipynb
+credentials.json
 
 model/*
 !model/.gitkeep 
@@ -10,6 +12,7 @@ Standford_Drone_Dataset/videos/*
 !Standford_Drone_Dataset/annotations/.gitkeep
 !Standford_Drone_Dataset/videos/.gitkeep
 
+datazip
 data/raw/*
 data/test/*
 data/val/*
