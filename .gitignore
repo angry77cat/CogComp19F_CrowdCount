@@ -18,4 +18,4 @@ data/val/*
 !data/val/.gitkeep
 
 
-.ipynb_checkpoints
+.ipynb_checkpoints/*
