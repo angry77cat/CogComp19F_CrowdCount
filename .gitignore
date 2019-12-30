@@ -6,6 +6,7 @@ credentials.json
 
 model/*
 !model/.gitkeep 
+*.zip
 
 Standford_Drone_Dataset/annotations/*
 Standford_Drone_Dataset/videos/*
@@ -13,10 +14,10 @@ Standford_Drone_Dataset/videos/*
 !Standford_Drone_Dataset/videos/.gitkeep
 
 datazip
-data/raw/*
+data/raw_v3/*
 data/test/*
 data/val/*
-!data/raw/.gitkeep
+!data/raw_v3/.gitkeep
 !data/test/.gitkeep
 !data/val/.gitkeep
 
