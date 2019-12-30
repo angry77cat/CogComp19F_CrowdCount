@@ -9,8 +9,7 @@ To start with this project, please get the dataset first.
 ### Dataset
 We acknownledge [Stanford Drone Dataset](http://cvgl.stanford.edu/projects/uav_data/) for annotated movies. The unzipped data should be placed under `Standford_Drone_Dataset/` since we are going to extract frames from original movies and annotations to `data/raw`.  
  
-The details are shown in `drone_data_generator.ipynb`. In short, the input and output are 2-dimensional images, the output is a 8-fold downsampled hot-map indicating the crowd density. Finally, It is expected to generate ~6k training data, each ~10MB. 
-> The preprocessed data will be released soon, so that there's no need to preprocess again.
+The details are shown in `drone_data_generator.ipynb`. In short, the input and output are 2-dimensional images, the output is a 8-fold downsampled hot-map indicating the crowd density. Finally, It is expected to generate ~3k training data, the preprocessed data is provided [here](https://drive.google.com/drive/u/1/folders/1EsaYItpd2JU48udURYVIMkXHQh3Cf8B8)(~24GB), or you can simply download it via `download.sh`.
  
 ![](https://i.imgur.com/K0Occto.png)
 
