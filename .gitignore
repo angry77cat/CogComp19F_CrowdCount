@@ -3,6 +3,8 @@ ShanghaiTech_Crowd_Counting_Dataset/
 UCF-QNRF_ECCV18/
 quickstart.ipynb
 credentials.json
+VisDrone2019-DET-train/
+VisDrone2019-DET-val/
 
 model/*
 !model/.gitkeep 

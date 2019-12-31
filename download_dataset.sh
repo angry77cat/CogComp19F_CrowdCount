@@ -1,3 +1,4 @@
+# FILEID=$1
 FILEID=1AHkQAeYZcQm2h1mUoYwivt1kADp238Cj
 FILENAME=data.zip
 wget --no-check-certificate "https://docs.google.com/uc?export=download&id=$FILEID" -O $FILENAME
