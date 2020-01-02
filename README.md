@@ -7,12 +7,12 @@ Crowd Counting in Drone View
 To start with this project, please get the dataset first.
 
 ### Dataset
-> dataset candidates:
-> [Stanford Drone Dataset](http://cvgl.stanford.edu/projects/uav_data/) - Aerial Images over Standford Campus
-> [VisDrone](https://github.com/VisDrone/VisDrone-Dataset) - Object Detection in Images
-> [UCF-QNRF](https://www.crcv.ucf.edu/data/ucf-qnrf/) - A Large Crowd Counting Data Set
-> [ShanghaiTech_Crowd_Counting_Dataset](https://github.com/desenzhou/ShanghaiTechDataset)
-> [GCC dataset](https://gjy3035.github.io/GCC-CL/)
+> dataset candidates:  
+> [Stanford Drone Dataset](http://cvgl.stanford.edu/projects/uav_data/) - Aerial Images over Standford Campus  
+> [VisDrone](https://github.com/VisDrone/VisDrone-Dataset) - Object Detection in Images  
+> [UCF-QNRF](https://www.crcv.ucf.edu/data/ucf-qnrf/) - A Large Crowd Counting Data Set  
+> [ShanghaiTech_Crowd_Counting_Dataset](https://github.com/desenzhou/ShanghaiTechDataset)  
+> [GCC dataset](https://gjy3035.github.io/GCC-CL/)  
 
 #### Our Raw dataset schema
 
