@@ -8,12 +8,73 @@ To start with this project, please get the dataset first.
 
 ### Dataset
 > dataset candidates:
-> [Stanford Drone Dataset](http://cvgl.stanford.edu/projects/uav_data/)
+> [Stanford Drone Dataset](http://cvgl.stanford.edu/projects/uav_data/) - Aerial Images over Standford Campus
 > [VisDrone](https://github.com/VisDrone/VisDrone-Dataset) - Object Detection in Images
+> [UCF-QNRF](https://www.crcv.ucf.edu/data/ucf-qnrf/) - A Large Crowd Counting Data Set
+> [ShanghaiTech_Crowd_Counting_Dataset](https://github.com/desenzhou/ShanghaiTechDataset)
+> [GCC dataset](https://gjy3035.github.io/GCC-CL/)
 
-We acknownledge Stanford Drone Dataset for annotated movies. The unzipped data should be placed under `Standford_Drone_Dataset/` since we are going to extract frames from original movies and annotations to `data/raw`.  
+#### Our Raw dataset schema
+
+        / 
+        |--raw_dataset/
+        |    |--ShanghaiTech_Crowd_Counting_Dataset/
+        |    |    |--part_A_final/
+        |    |    |    |--test_data/
+        |    |    |    |--train_data/
+        |    |    |--part_B_final/
+        |    |    |    |--test_data/
+        |    |    |    |--train_data/
+        |    |--Standford_Drone_Dataset/
+        |    |    |--annotations/
+        |    |    |--videos/
+        |    |--UCF-QNRF_ECCV18/
+        |    |    |--Test/
+        |    |    |--Train/
+        |    |--VisDrone2019/
+        |    |    |--VisDrone2019-DET-Train/
+        |    |    |    |--annotations/
+        |    |    |    |--images/
+        |    |    |--VisDrone2019-DET-val/
+        |    |    |    |--annotations/
+        |    |    |    |--images/
+
+The unzipped data should be placed under `raw_dataset/` and we are going to extract frames from original movies and annotations to `data/`.  
  
-The details are shown in `drone_data_generator.ipynb`. In short, the input and output are 2-dimensional images, the output is a 8-fold downsampled hot-map indicating the crowd density. Finally, It is expected to generate ~3k training data, the preprocessed data is provided [here](https://drive.google.com/drive/u/1/folders/1EsaYItpd2JU48udURYVIMkXHQh3Cf8B8)(~24GB), or you can simply download it via `download.sh`.
+The preprocessing details are shown in `drone_data_generator.ipynb`. In short, we only extract human-related labels such as pedestrians and biker. Finally, the input and output are both 2-dimensional images while the output is a 8-fold downsampled hot-map indicating the crowd density(hot-map). 
+
+#### Our preprocessed data
+
+        /
+        |--data/
+        |    |--StandfordDD_train/
+        |    |--StandfordDD_val
+        |    |--test
+        |    |--VisDrone2019_train
+        |    |--VisDrone2019_val
+
+
+The preprocessed dataset is also provided [here](https://drive.google.com/drive/u/1/folders/1EsaYItpd2JU48udURYVIMkXHQh3Cf8B8). Or you can download it via `download_dataset.sh`.
+
+    . download_dataset.sh $1 $2
+ - `$1` is the fileid.  
+ - `$2` is the filename.  
+
+1. Standford drone dataset [23GB]
+2877 for training, 20 for validation. Total: 68GB
+
+        . download_dataset.sh 1AHkQAeYZcQm2h1mUoYwivt1kADp238Cj sdd.zip
+    
+2. Visdrone dataset [24GB]
+3546 for training, 449 for validation. Total: 62.4GB
+
+        . download_dataset.sh 1eXmn9qxzG5FabUqNexXxtGu_7jNbcjhO visdrone.zip
+        
+3. testing set [0.5GB]
+
+        . download_dataset.sh 1HoAuI7Q6W7d9Rphp7RL-LlXqOy0-7RhH testset.zip
+
+Example:
  
 ![](https://i.imgur.com/K0Occto.png)
 
